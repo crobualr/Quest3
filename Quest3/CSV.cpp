@@ -20,14 +20,14 @@ CSV::CSV(string csvFile) {
 		numeratorFraction = stoi(num);
 		denominatorFraction = stoi(den);
 		Fraction fraction1(numeratorFraction, denominatorFraction);
-		fraction1.reducedFraction(numeratorFraction, denominatorFraction);
+		//fraction1.reducedFraction(numeratorFraction, denominatorFraction);
 		getline(fin, operation, ',');
 		getline(fin, num2, ',');
 		getline(fin, den2, '\n');
 		numeratorFraction = stoi(num2);
 		denominatorFraction = stoi(den2);
 		Fraction fraction2(numeratorFraction, denominatorFraction);
-		fraction2.reducedFraction(numeratorFraction, denominatorFraction);
+		//fraction2.reducedFraction(numeratorFraction, denominatorFraction);
 		cout << num << "/" << den << operation << num2 << "/" << den2 << endl;
 	}
 	fin.close();
