@@ -33,7 +33,20 @@ void Fraction::reducedFraction(int numerator1, int denominator1) {
 	cout << "The result of the operation is " << numerator1 << "/" << denominator1 << endl;  
 }
 void operator + (Fraction one, Fraction two){
+	int num1;
+	int newNum, newNum2, newDenom, sumNum;
+	Fraction fraction;
+	if (one.denominator == two.denominator) {
+		num1 = one.numerator + two.numerator;
+		fraction.reducedFraction(num1, one.denominator);
+	}
+	else {
+		newNum = (one.numerator * two.denominator);
+		newNum2 = (two.numerator * one.denominator);
+		newDenom = (one.denominator * two.denominator);
+		sumNum = newNum + newNum2;
 
+	}
 }
 void operator - (Fraction one, Fraction two){
 
@@ -50,6 +63,8 @@ void operator / (Fraction one, Fraction two){
 
 }
 bool operator == (Fraction one, Fraction two){
+	one.reducedFraction(one.numerator, one.denominator);
+	two.reducedFraction(two.numerator, one.denominator);
 	return (one.numerator == two.numerator && two.denominator == two.denominator);
 }
 bool operator != (Fraction one, Fraction two){
