@@ -29,3 +29,21 @@ void Fraction::reducedFraction(int numerator1, int denominator1) {
 	denominator1 /= commonFactor;
 	cout << "The result of the operation is " << numerator1 << "/" << denominator1 << endl;  
 }
+void operator + (Fraction one, Fraction two){
+
+}
+void operator - (Fraction one, Fraction two){
+
+}
+void operator * (Fraction one, Fraction two){
+
+}
+void operator / (Fraction one, Fraction two){
+
+}
+bool operator == (Fraction one, Fraction two){
+	return (one.numerator == two.numerator && two.denominator == two.denominator);
+}
+bool operator != (Fraction one, Fraction two){
+
+}
