@@ -10,6 +10,13 @@ public:
 	friend void operator-(Fraction one, Fraction two);
 	friend void operator*(Fraction one, Fraction two);
 	friend void operator/(Fraction one, Fraction two);
+	friend bool operator==(Fraction one, Fraction two);
+	friend bool operator!=(Fraction one, Fraction two);
+
+	//friend bool operator¡(Fraction one, Fraction two);
+	//friend bool operator¿(Fraction one, Fraction two);
+	//friend bool operator¡=(Fraction one, Fraction two);
+	//friend bool operator¿=(Fraction one, Fraction two);
 	int numerator;
 	int denominator;
 };
