@@ -1,6 +1,5 @@
 #include <iostream>
 #include <algorithm>
-#include <math.h>
 #include <string>
 #include "Fraction.h"
 using namespace std;
@@ -17,7 +16,6 @@ int Fraction::GCF(int numerator1, int denominator1) {
 		numerator1 = temp;
 	}
 	return numerator1;
-	//return Math.abs(numerator1 + denominator1);
 }
 void Fraction::reducedFraction(int numerator1, int denominator1) {
 	//perform arithmetic operation on 2 fractions
