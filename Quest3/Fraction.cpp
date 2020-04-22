@@ -73,6 +73,12 @@ void operator * (Fraction one, Fraction two){
 	multiplyFraction.reducedFraction(num1, num2);
 }
 void operator / (Fraction one, Fraction two){
+	int newNum, newDenom;
+	Fraction fraction;
+	
+	newNum = (one.numerator * two.denominator);
+	newDenom = (one.denominator * two.numerator);
+	fraction.reducedFraction(newNum, newDenom);
 
 }
 bool operator == (Fraction one, Fraction two){
