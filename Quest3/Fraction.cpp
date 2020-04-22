@@ -45,11 +45,24 @@ void operator + (Fraction one, Fraction two){
 		newNum2 = (two.numerator * one.denominator);
 		newDenom = (one.denominator * two.denominator);
 		sumNum = newNum + newNum2;
-
+		fraction.reducedFraction(sumNum, newDenom);
 	}
 }
 void operator - (Fraction one, Fraction two){
-
+	int num1;
+	int newNum, newNum2, newDenom, sumNum;
+	Fraction fraction;
+	if (one.denominator == two.denominator) {
+		num1 = one.numerator - two.numerator;
+		fraction.reducedFraction(num1, one.denominator);
+	}
+	else {
+		newNum = (one.numerator * two.denominator);
+		newNum2 = (two.numerator * one.denominator);
+		newDenom = (one.denominator * two.denominator);
+		sumNum = newNum - newNum2;
+		fraction.reducedFraction(sumNum, newDenom);
+	}
 }
 void operator * (Fraction one, Fraction two){
 	int num1;
