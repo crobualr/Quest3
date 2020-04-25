@@ -28,7 +28,37 @@ CSV::CSV(string csvFile) {
 		denominatorFraction = stoi(den2);
 		Fraction fraction2(numeratorFraction, denominatorFraction);
 		//fraction2.reducedFraction(numeratorFraction, denominatorFraction);
-		cout << num << "/" << den << operation << num2 << "/" << den2 << endl;
+		//cout << num << "/" << den << operation << num2 << "/" << den2 << endl;
+		if (operation == "+") {
+			operator+(fraction1, fraction2);
+		}
+		else if (operation == "-") {
+			operator-(fraction1, fraction2);
+		}
+		else if (operation == "*") {
+			operator*(fraction1, fraction2);
+		}
+		else if (operation == "/") {
+			operator/(fraction1, fraction2);
+		}
+		else if (operation == "==") {
+			operator==(fraction1, fraction2);
+		}
+		else if (operation == "!=") {
+			operator==(fraction1, fraction2);
+		}
+		else if (operation == "¡") {
+			//operator¡(fraction1, fraction2);
+		}
+		else if (operation == "¡=") {
+			//operator¡=(fraction1, fraction2);
+		}
+		else if (operation == "¿") {
+			//operator¿(fraction1, fraction2);
+		}
+		else if (operation == "¿=") {
+			//operator¿=(fraction1, fraction2);
+		}
 	}
 	fin.close();
 }
