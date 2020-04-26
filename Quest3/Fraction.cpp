@@ -82,9 +82,36 @@ void operator / (Fraction one, Fraction two){
 
 }
 bool operator == (Fraction one, Fraction two){
-	one.reducedFraction(one.numerator, one.denominator);
-	two.reducedFraction(two.numerator, one.denominator);
-	return (one.numerator == two.numerator && two.denominator == two.denominator);
+	int gcf1, gcf2, gcf;
+	gcf = 1;
+	gcf1 = one.GCF(one.numerator, one.denominator);
+	gcf2 = two.GCF(two.numerator, two.denominator);
+	
+	if (gcf != gcf1 && gcf != gcf2) {
+		one.numerator /= gcf1;
+		one.denominator /= gcf1;
+		two.numerator /= gcf2;
+		two.denominator /= gcf2;
+	}
+	else if (gcf != gcf1) {
+		one.numerator /= gcf1;
+		one.denominator /= gcf1;
+	}
+	else if (gcf != gcf2) {
+		two.numerator /= gcf2;
+		two.denominator /= gcf2;
+	}
+
+	if (one.numerator == two.numerator && two.denominator == two.denominator) {
+		cout << "The result of the operation is " << one.numerator << "/" << one.denominator
+			<< " == " << two.numerator << "/" << two.denominator << endl;
+		return true;
+	}
+	else {
+		cout << "The result of the operation is " << one.numerator << "/" << one.denominator
+			<< " != " << two.numerator << "/" << two.denominator << endl;
+		return false;
+	}
 }
 bool operator != (Fraction one, Fraction two){
 	return false;
