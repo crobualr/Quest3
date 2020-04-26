@@ -5,10 +5,9 @@
 #include "Fraction.h"
 using namespace std;
 
-//CSV::CSV() {};
-CSV::CSV(string csvFile) {
+CSV::CSV(string file) {
 	ifstream fin;
-	fin.open(csvFile);
+	fin.open(file);
 	if (!fin.is_open()) {
 		cout << "ERROR: Invalid CSV file name or unable to locate file" << endl;
 	}
@@ -62,7 +61,7 @@ CSV::CSV(string csvFile) {
 	}
 	fin.close();
 }
-//CSV DESTRUCTOR
+CSV::~CSV() {}
 //COPY CONSTRUCTOR
 //COPY ASSIGNMENT
 //MOVE CONSTRUCTOR
