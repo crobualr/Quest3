@@ -62,7 +62,11 @@ CSV::CSV(string file) {
 	fin.close();
 }
 CSV::~CSV() {}
-//COPY CONSTRUCTOR
+CSV::CSV(const CSV& csvCopy) {
+
+}
 //COPY ASSIGNMENT
-//MOVE CONSTRUCTOR
+CSV::CSV(const CSV&& csvMove) {
+
+}
 //MOVE ASSIGNMENT
