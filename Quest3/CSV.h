@@ -5,8 +5,8 @@ class CSV {
 public:	
 	CSV(string file);
 	~CSV();
-	CSV(const CSV&);
-	//COPY ASSIGNMENT
-	CSV(const CSV&&);
-	//MOVE ASSIGNMENT
+	CSV(const CSV& csvCopy);
+	CSV& operator= (const CSV& csvCopy);
+	CSV(const CSV&& csvMove);
+	
 };
