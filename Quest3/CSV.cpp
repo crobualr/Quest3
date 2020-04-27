@@ -63,10 +63,13 @@ CSV::CSV(string file) {
 }
 CSV::~CSV() {}
 CSV::CSV(const CSV& csvCopy) {
-
+	cout << "This is a copy constructor: " << endl;
 }
-//COPY ASSIGNMENT
+CSV& CSV::operator= (const CSV& csvCopy) {
+	cout << "This is an assignment operator: " << endl;
+	return *this;
+}
 CSV::CSV(const CSV&& csvMove) {
-
+	cout << "This is a move constructor: " << endl;
 }
 //MOVE ASSIGNMENT
