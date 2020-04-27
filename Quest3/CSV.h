@@ -8,5 +8,5 @@ public:
 	CSV(const CSV& csvCopy);
 	CSV& operator= (const CSV& csvCopy);
 	CSV(const CSV&& csvMove);
-	
+	CSV& operator= (const CSV&& csvMove);
 };
